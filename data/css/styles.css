@@ -1,0 +1,318 @@
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Animista animation */
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.focus-in-expand {
+  animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 2s; /* Add delay for the animation */
+}
+
+/* Reset margin and padding for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Base styles for body */
+body {
+    font-family: Arial, sans-serif;
+    color: #999;
+    margin-top: 0; /* Remove top margin */
+    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5; /* Default background */
+}
+
+/* Removed "INFINITY" text */
+body::before {
+    content: none;
+}
+
+/* Start section - Applying the pattern properly */
+#start {
+    font-family: Arial, sans-serif;
+    color: #999;
+    text-align: center;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat;
+    background-size: 50px 50px;
+    animation: bg-scrolling-reverse 0.92s linear infinite;
+}
+
+/* Header styles */
+header {
+    background-color: #f5f5dc; /* Beige background color */
+    color: #333; /* Darker text color for contrast */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat;
+    background-size: 50px 50px;
+    animation: bg-scrolling-reverse 0.92s linear infinite;
+    transition: height 1s ease-out, background-color 1s ease-out; /* Add transition for height and background color change */
+}
+
+header.shrink {
+    height: 60vh; /* Shrink to 60% of the viewport height */
+    background-color: #fff; /* Change background color to white */
+}
+
+header.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+header h1 {
+    color: #333; /* Darker text color for contrast */
+    font-weight: 900; /* Make text bolder */
+    animation: fadeInDown 1s ease-out both;
+    animation-delay: 1s; /* Add delay for the animation */
+}
+
+header .inspiring-line {
+    color: #333; /* Darker text color for contrast */
+    font-size: 1.5rem;
+    font-weight: 900; /* Make text bolder */
+    margin-top: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Home section */
+#home {
+    background-color: #f5f5dc; /* Beige background */
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Container styles */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Portfolio item styles */
+.portfolio-item {
+    background: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.portfolio-item h2 {
+    margin-top: 0;
+}
+
+/* Footer styles */
+footer {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+footer.visible {
+    opacity: 1;
+}
+
+/* Table of Contents styles */
+#table-of-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toc-sections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.toc-section {
+    flex: 1;
+    margin: 0 1rem;
+}
+
+#table-of-contents ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#table-of-contents li {
+    margin: 1rem;
+    text-align: center;
+}
+
+#table-of-contents img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#table-of-contents span {
+    display: block;
+    margin-top: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+#table-of-contents img[src="data/img/7.png"],
+#table-of-contents img[src="data/img/8.png"],
+#table-of-contents img[src="data/img/9.png"],
+#table-of-contents img[src="data/img/10.jpg"] {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#table-of-contents img[src="data/img/11.jpg"],
+#table-of-contents img[src="data/img/12.jpg"],
+#table-of-contents img[src="data/img/13.jpg"] {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#table-of-contents a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+#table-of-contents div {
+    margin-top: 10px;
+}
+
+/* Start section */
+#start {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+#start img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#start h2, #start p {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Menu styles */
+#menu {
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#menu.visible {
+    display: block;
+}
+
+#menu button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#menu button:hover {
+    background-color: #555;
+}
+
+/* Whiteout overlay */
+#whiteout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 1s ease-out;
+}
+
+#whiteout.visible {
+    opacity: 1;
+}

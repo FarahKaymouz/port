@@ -6,6 +6,64 @@
     <title>Farah Kaymouz</title>
     <link rel="stylesheet" href="data/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        #rust-oration {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        #rust-oration img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        #circle-img {
+            width: 300px; /* Keep the current size */
+            height: 300px; /* Keep the current size */
+            border-radius: 50%;
+            position: absolute;
+            top: 70%; /* Keep the current vertical position */
+            right: 40%; /* Move the circle farther to the left */
+            transform: translate(50%, -50%);
+            background: url('data/img/13.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 1; /* Ensure visibility */
+            z-index: 1; /* Bring the circle to the front */
+        }
+
+        #arrow-img {
+            position: absolute;
+            top: 45%; /* Position the arrow below the circle */
+            right: 38%; /* Adjust horizontal position for manual tweaking */
+            transform: translate(50%, -50%) scaleX(-1); /* Flip the arrow horizontally */
+            max-width: 100px; /* Adjust size as needed */
+            opacity: 1; /* Ensure visibility */
+        }
+
+        #combined-image {
+            margin-top: 20px;
+            width: 100%;
+            height: 300px;
+            background: url('data/img/14.jpg') left center no-repeat, url('data/img/15.jpg') right center no-repeat;
+            background-size: 50% 100%, 50% 100%;
+        }
+
+        @keyframes moveCircle {
+            0% {
+                right: 10%;
+                opacity: 0;
+            }
+            50% {
+                right: 50%;
+                opacity: 1;
+            }
+            100% {
+                right: 60%;
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -27,19 +85,19 @@
                     </li>
                     <li>
                         <a href="#femme-fusion-foundry">
-                            <img src="data/img/8.png" alt="FemmeFusionFoundry">
+                            <img src="data/img/4.jpg" alt="FemmeFusionFoundry">
                             <span>Makerspace Design: FemmeFusionFoundry</span>
                         </a>
                     </li>
                     <li>
                         <a href="#haneen-house">
-                            <img src="data/img/9.png" alt="HaneenHouse">
+                            <img src="data/img/2.jpg" alt="HaneenHouse">
                             <span>Live/Work Design: HaneenHouse</span>
                         </a>
                     </li>
                     <li>
                         <a href="#silk-road-sanctuary">
-                            <img src="data/img/10.jpg" alt="Silk Road Sanctuary">
+                            <img src="data/img/9.png" alt="Silk Road Sanctuary">
                             <span>Restaurant Design: Silk Road Sanctuary</span>
                         </a>
                     </li>
@@ -50,19 +108,19 @@
                 <ul>
                     <li>
                         <a href="#modular-pavilion">
-                            <img src="data/img/11.jpg" alt="Modular Pavilion">
+                            <img src="data/img/10.jpg" alt="Modular Pavilion">
                             <span>Modular Pavilion</span>
                         </a>
                     </li>
                     <li>
                         <a href="#dynamic-shading">
-                            <img src="data/img/12.jpg" alt="Dynamic Shading">
+                            <img src="data/img/6.jpg" alt="Dynamic Shading">
                             <span>Dynamic Shading</span>
                         </a>
                     </li>
                     <li>
                         <a href="#transformable-staircase">
-                            <img src="data/img/13.jpg" alt="Transformable Staircase">
+                            <img src="data/img/11.jpg" alt="Transformable Staircase">
                             <span>Transformable Staircase</span>
                         </a>
                     </li>
@@ -71,15 +129,89 @@
         </div>
     </section>
 
-    <section id="rust-oration">
-        <h2>Theater Design: Rust-oration</h2>
-        <p>Discover my latest interior design projects and get inspired.</p>
+    <section id="rust-oration" style="display: flex; align-items: flex-start; position: relative;">
+        <div style="flex: 1;">
+            <!-- Increased font size for the heading -->
+            <h2 style="font-size: 3rem; background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">
+                <b>Theater Design: Rust-oration</b>
+            </h2>
+            <!-- Increased font size for the paragraph -->
+            <p style="font-size: 1.5rem;">
+                <b>This design is an ode to <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">rust</span> and the
+                stage's <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">metamorphosis</span>. Drawing from
+                performers' movements, it <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">weaves</span>
+                geometry in an <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">additive dance</span>, where
+                spaces become intimate, devoid of
+                conventional <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">thresholds</span>. Like nature's
+                embrace of the <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">artificial</span>, I've melded
+                <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">organic</span> and <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">angular</span> forms, echoing the
+                hues of <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">rust</span>. Through the <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">rust</span> to
+                <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">burgundy</span> palette, the atmosphere
+                <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">harmonizes</span>, engaging with theatrical
+                lights, inviting the audience into an
+                <span style="background: url('data/img/rust.jpg') no-repeat; -webkit-background-clip: text; color: transparent;">immersive journey</span> beyond the
+                performance.</b>
+            </p>
+        </div>
+        <div style="flex: 1; text-align: right;">
+            <img src="data/img/12.jpg" alt="Rustoration Image" style="max-width: 80%; height: auto;">
+            <div id="circle-img"></div> <!-- Keep only one circle -->
+            <div id="arrow-container">
+                <img id="arrow-img" src="data/img/arrow.jpg" alt="Arrow" style="transform: scaleX(-1); max-width: 100px; position: absolute; top: 50%; right: 50%; transform: translate(50%, -50%) scaleX(-1);">
+            </div>
+        </div>
     </section>
+    <!-- Move the combined image inside the Rust section -->
+    <div id="combined-image"></div>
+    <div id="additional-images" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 30px;">
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="text-align: center;">
+                <img src="data/img/20.jpg" alt="Image 20" style="width: 350px; height: 350px;">
+                <p><b>Movement Traces</b></p>
+            </div>
+            <div style="text-align: center;">
+                <img src="data/img/18.png" alt="Image 18" style="width: 350px; height: 350px;">
+                <p><b>Study Model 1</b></p>
+            </div>
+            <div style="text-align: center;">
+                <img src="data/img/19.png" alt="Image 19" style="width: 350px; height: 350px;">
+                <p><b>Study Model 2</b></p>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px; flex: 1;">
+            <div style="text-align: center;">
+                <img src="data/img/16.png" alt="Image 16" style="width: 90%; height: auto;">
+                <p><b>Entrance into Bar</b></p>
+            </div>
+            <div style="text-align: center;">
+                <img src="data/img/17.png" alt="Image 17" style="width: 90%; height: auto;">
+                <p><b>Threshold into Theatre</b></p>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="text-align: center;">
+                <img src="data/img/22.jpg" alt="Image 22" style="width: 350px; height: 350px;">
+                <p><b>Palette, in and out of Stage Light</b></p>
+            </div>
+            <div style="text-align: center;">
+                <img src="data/img/21.png" alt="Image 21" style="width: 350px; height: 350px;">
+                <p><b>Custom Material Mutations</b></p>
+            </div>
+        </div>
+    </div>
+
     <section id="femme-fusion-foundry" class="container">
         <div class="portfolio-item">
-            <img src="data/img/" alt="Project 1">
-            <h2>Makerspace Design: FemmeFusionFoundry</h2>
-            <p>Description of Project 1.</p>
+            <h2 style="font-size: 3rem; color: #BC9E82; font-weight: bold;">FemmeFusionFoundry</h2>
+            <p style="font-size: 1.5rem; color: #BC9E82;">
+                FFF - A <b>makerspace-gallery</b> celebrating the essence of
+                <b>womanhood</b> through diverse cultural influences and <b>interdisciplinary</b>
+                practices, built after the research of one multidisciplinary artist. It fosters
+                <b>creativity</b>, <b>heritage</b>, and <b>community</b> under the umbrella of
+                <b>female craftsmanship</b>. The <b>womanhood</b> voice is translated in a
+                language of <b>plaster</b> and <b>mesh</b>, intertwining <b>strength</b> and
+                <b>fluidity</b>, and all that is in between.
+            </p>
         </div>
     </section>
     <section id="haneen-house" class="container">
@@ -121,15 +253,7 @@
         <p>&copy; 2025 Your Name. All rights reserved.</p>
     </footer>
     <script src="data/js/scripts.js"></script>
-    <script>
-        // JavaScript to shrink the header after a delay and show the footer
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('header').classList.add('shrink');
-                document.getElementById('footer').classList.add('visible');
-            }, 3000); // Delay of 3 seconds
-        });
-    </script>
+
 </body>
 </html>
 
